@@ -1,3 +1,4 @@
+import EventsPage from './views/events-page';
 import auth from "./auth";
 import { createRouter, createWebHashHistory } from "vue-router";
 
@@ -92,6 +93,15 @@ const router = new createRouter({
     {
       path: "/:pathMatch(.*)*",
       redirect: "/home"
+    }, 
+    {
+      path: "/events-page",
+      name: "events-page",
+      meta: {
+        requiresAuth: true,
+        layout: defaultLayout
+      },
+      component: EventsPage
     }
   ],
   history: createWebHashHistory()

@@ -17,5 +17,10 @@ export default [
         path: "/tasks"
       }
     ]
+  }, 
+  {
+    text: 'Events Page',
+    path: '/events-page',
+    icon: 'folder'
   }
   ];
